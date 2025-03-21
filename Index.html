@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vehicle Crashes in Boston</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid justify-content-center">
+                <div class="navbar-collapse collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="data.html">Data Description</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="visualizations.html">Visualizations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="summary.html">Summary</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Placeholder for space under the fixed navbar -->
+        <div style="margin-top: 80px;">
+            <!-- Header Section -->
+            <header class="text-center mb-4">
+                <h1>Vehicle Crashes in Boston</h1>
+            </header>
+            <p>Traffic accidents occur frequently and are a significant public safety concern, especially in densely populated areas like Boston, Cambridge, and Somerville. The Massachusetts Department of Transportation reported that over 100,000 crashes occur in Massachusetts annually (Collins, 2025). Furthermore, from 2020 to 2021, Massachusetts saw a 20.4% increase in deadly vehicle crashes (Spada Law..). This demonstrates how vehicle crashes are becoming more frequent and represent a growing public safety concern.
+
+                This project will analyze crash data from Cambridge, Boston, and Somerville to identify environmental influences, high-risk areas, and temporal trends in vehicle accidents across three of the most densely populated cities in Massachusetts. Understanding when and where crashes occur most frequently, as well as how weather conditions and time of day influence accident severity, will provide valuable insights. These findings can be instrumental for city planners, transportation policymakers, and officials in making data-driven decisions to improve road safety and reduce crash rates.
+                </p>
+        </div>
+
+        <!-- Main Content Sections with Text on the Left and Image on the Right -->        
+        <article class="data">
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+                <a class="activeBlock" href="data.html">
+                  <div class="textBlock">
+                    <h2>Data</h2>
+                    <p>Our data is from mass.gov which has the vehicle crash data from 2000-2025. We decided to do 2018-2025 for Boston, Cambridge, and Somervile by requesting the data in CSV format. 
+                    </p>
+                  </div>
+                </a>
+                
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <a href="data.html">
+                <img class="img-fluid" src="/image/Map of the U.S crush.png" alt="data picture">
+                </a>
+              </div>
+            </div>
+          </article>
+      
+          <article class="visualizations">
+            <div class="row">
+            <div class="col-md-8 col-sm-12">
+              <a class="activeBlock" href="visualizations.html">
+                <div class="textBlock">
+                  <h2>Visualizations</h2>
+                  <p>This webpage showing the visualizations for the vehicle cursh</p>
+                </div>
+              </a>
+      
+            </div>
+            <div class="col-md-4 col-sm-12">
+            <a href="visualizations.html">
+            <img class="img-fluid" src="images/.png" alt="visualizations picture"></a>
+            </div>
+          </div>
+          </article>
+      
+          <article class="summary">
+            <div class="row">
+            <div class="col-md-8 col-sm-12">
+              <a class="activeBlock" href="summary.html">
+              <div class="textBlock">
+                <h2>Summary</h2>
+                <p>This website showing our conclusion</p>
+              </div>
+              </a>
+
+            </div>
+            <div class="col-md-4 col-sm-12">
+            <a href="summary.html">
+            <img class="img-fluid" src="images/.png" alt="summary picture"></a>
+            </div>
+          </div>
+          </article>
+
+
+        <!-- Footer -->
+        <footer class="text-center bg-light py-3">
+            <p>&copy; 2025 Vehicle Crashes in Boston.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

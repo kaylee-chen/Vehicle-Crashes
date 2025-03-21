@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Data Description - Data Insights Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">  
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid justify-content-center">
+                <div class="navbar-collapse collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="data.html">Data Description</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="visualizations.html">Visualizations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="summary.html">Summary</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div style="margin-top: 80px;">
+            <!-- Header Section -->
+            <header>
+                <h1>Data Description</h1>
+            </header>
+        </div>
+        
+        
+        <!-- Main Content -->
+  </article>
+  <article class="overview">
+    <div class="row">
+      <div class="col-md-8 col-sm-12">
+ 
+        <div class="textBlock">
+        <h2>Dataset Overview</h2>
+        <div class="data-summary">
+            <ul>
+                <li>Boston: 30,618 rows</li>
+                <li>Somerville: 4,898 rows</li>
+                <li>Cambridge: 10,000 rows</li>
+                <li>Columns: 25</li>
+            </ul>
+        </div>        
+        <p> Our dataset comprises detailed vehicle crash data from three major cities in Massachusetts: Boston, Somerville, and Cambridge. The dataset is sourced from Massachusetts Government (<a>mass.gov</a>) and includes comprehensive records from 2000 to 2025, with a focused analysis on 2018-2025.</p>
+      </div>
+      </div>
+ 
+      <div class="col-md-4 col-sm-12">
+        <img class="img-fluid" src="images/.jpeg" alt="dataset overview picture">
+      </div>
+    </div>
+  </article>
+ 
+      <article class="attribute">
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <img class="img-fluid" src="images/.jpeg" alt="dataset attribute picture">
+          </div>
+          <div class="col-md-8 col-sm-12">
+ 
+            <div class="textBlock">
+            <h2>Data Attribute</h2>
+            <ul>
+                <li>Temporal Data – Records the date, time, and season of each crash, helping identify trends and peak accident hours.</li>
+                <li>Geographical Information – Includes latitude, longitude, street names, and intersections, allowing for spatial analysis of high-risk locations.</li>
+                <li>Weather & Road Conditions – Tracks rain, snow, fog, visibility, and road surface conditions, providing insights into how environmental factors impact crashes.</li>
+                <li>Crash Severity – Classifies accidents as minor, major, or fatal, helping assess risk factors that lead to severe crashes.</li>
+                <li>Vehicle & Driver Factors – Captures details like speeding, distracted driving, DUI, and vehicle type, highlighting common causes of accidents.</li>
+            </ul>
+ 
+          </div>
+          </div>
+ 
+        </div>
+      </article>
+ 
+          <article class="source">
+            <div class="row">
+              <div class="col-md-8 col-sm-12">
+ 
+                <div class="textBlock">
+                <h2>Data Source and Credibility</h2>
+                <p>The dataset used in this project is sourced from the 
+                    <a href="https://www.mass.gov" target="_blank" rel="noopener noreferrer">Massachusetts Government</a>, 
+                    which maintains official records of vehicle crashes across the state. The data is collected from law enforcement reports, traffic monitoring systems, and city transportation agencies. It includes crash records from 2000 to 2025, with a focused analysis on 2018-2025 for Boston, Cambridge, and Somerville.
+                 </p>
+
+ 
+              </div>
+              </div>
+              <div class="col-md-4 col-sm-12">
+                <img class="img-fluid" src="images/.jpeg" alt="data source picture">
+              </div>
+          </div>
+ 
+         </article>
+
+         <article class="suitable">
+            <div class="row">
+              <div class="col-md-4 col-sm-12">
+                <img class="img-fluid" src="images/.jpeg" alt="dataset  picture">
+              </div>
+              <div class="col-md-8 col-sm-12">
+     
+                <div class="textBlock">
+                <h2>Why this Dataset is Suitable"</h2>
+                <p>The data is suitable because it gives us a plethora of data to work with along with enough rows after we clean our data by getting rid of the nulls. Each file has 25 columns but we plan to cut out the significantly empty columns. The data is also suitable because it has numerical and categorical columns like “Road_Surface_Condition” and “Number_of_Vehicles”. Overall this data is suitable because it gives us a range of crash details like weather conditions, allowing us to do time-bases, geospatial, and cause-based analysis. It also will allow us to compare crash patterns and help us generate meaningful recommendations for road safety in Massachusetts. One information that could have been helpful was the speed the cars were going at but the data given is enough. </p>
+
+     
+              </div>
+              </div>
+     
+            </div>
+          </article>
+        
+        <!-- Footer -->
+        <footer class="text-center bg-light py-3">
+            <p>&copy; 2025 Vehicle Crashes in Boston.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript for Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

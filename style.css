@@ -1,0 +1,59 @@
+/* Navigation bar customization */
+.navbar {
+    background-color: #f8f9fa; /* Adjust the background color as needed */
+}
+
+.navbar-nav {
+    text-align: center;
+}
+
+.nav-item {
+    padding: 0 10px; /* Adjust padding for better spacing between links */
+}
+
+.nav-link {
+    color: #333; /* Adjust the color as needed */
+}
+
+/* */
+.activeBlock{
+    color:#000;
+    text-decoration: none;
+  }
+  .activeBlock:hover{
+    color:#000;
+    text-decoration:underline;
+  }
+  .textBlock{
+    padding-left: 50px;
+    padding-top:50px;
+  }
+  .data{
+    background-color: #f7f8f9; /* light grey */
+    margin-top: 20px;
+  }
+  .visualizations{
+    background-color: #f7f8f9; /* light grey */
+    margin-top: 20px;
+  }
+  .summary{
+    background-color: #f7f8f9; /* light grey */
+    margin-top: 20px;
+  }
+  .overview{
+    background-color: #f7f8f9; /* light grey */
+    margin-top: 20px;
+  }
+  .attribute{
+    background-color: #f7f8f9; /* light grey */
+    margin-top: 20px;
+  }
+  .source{
+    background-color: #f7f8f9; /* light grey */
+    margin-top: 20px;
+  }
+  .suitable{
+    background-color: #f7f8f9; /* light grey */
+    margin-top: 20px;
+  }
+
