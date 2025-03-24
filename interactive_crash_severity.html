@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.8.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-a8d9b6abb7be89354ea970faa7a1e896"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "Maximum_Injury_Severity_Reported", "scale": {"domain": ["Deceased not caused by crash", "Fatal injury (K)", "No Apparent Injury (O)", "No injury", "Non-fatal injury - Incapacitating", "Non-fatal injury - Non-incapacitating", "Non-fatal injury - Possible", "Not Applicable", "Not reported", "Possible Injury (C)", "Suspected Minor Injury (B)", "Suspected Serious Injury (A)", "Unknown"], "scheme": "category20"}, "title": "Injury Severity", "type": "nominal"}, "tooltip": [{"field": "City_Town_Name", "type": "nominal"}, {"field": "Maximum_Injury_Severity_Reported", "type": "nominal"}, {"field": "Count", "type": "quantitative"}], "x": {"field": "City_Town_Name", "title": "City/Town Name", "type": "nominal"}, "y": {"field": "Count", "title": "Number of Crashes", "type": "quantitative"}}, "height": 600, "params": [{"name": "severity_select", "bind": {"input": "select", "options": ["All", "Deceased not caused by crash", "Fatal injury (K)", "No Apparent Injury (O)", "No injury", "Non-fatal injury - Incapacitating", "Non-fatal injury - Non-incapacitating", "Non-fatal injury - Possible", "Not Applicable", "Not reported", "Possible Injury (C)", "Suspected Minor Injury (B)", "Suspected Serious Injury (A)", "Unknown"], "name": "Select Severity: "}, "value": "All"}], "title": "Crash Injury Severity Across Different Boston Metropolitan Areas", "transform": [{"filter": "((datum.Maximum_Injury_Severity_Reported === severity_select) || (severity_select === 'All'))"}], "width": 800, "$schema": "https://vega.github.io/schema/vega-lite/v5.8.0.json", "datasets": {"data-a8d9b6abb7be89354ea970faa7a1e896": [{"City_Town_Name": "BOSTON", "Maximum_Injury_Severity_Reported": "Deceased not caused by crash", "Count": 23}, {"City_Town_Name": "BOSTON", "Maximum_Injury_Severity_Reported": "Fatal injury (K)", "Count": 149}, {"City_Town_Name": "BOSTON", "Maximum_Injury_Severity_Reported": "No Apparent Injury (O)", "Count": 17881}, {"City_Town_Name": "BOSTON", "Maximum_Injury_Severity_Reported": "No injury", "Count": 4223}, {"City_Town_Name": "BOSTON", "Maximum_Injury_Severity_Reported": "Non-fatal injury - Incapacitating", "Count": 216}, {"City_Town_Name": "BOSTON", "Maximum_Injury_Severity_Reported": "Non-fatal injury - Non-incapacitating", "Count": 1154}, {"City_Town_Name": "BOSTON", "Maximum_Injury_Severity_Reported": "Non-fatal injury - Possible", "Count": 867}, {"City_Town_Name": "BOSTON", "Maximum_Injury_Severity_Reported": "Not Applicable", "Count": 81}, {"City_Town_Name": "BOSTON", "Maximum_Injury_Severity_Reported": "Not reported", "Count": 2847}, {"City_Town_Name": "BOSTON", "Maximum_Injury_Severity_Reported": "Possible Injury (C)", "Count": 2362}, {"City_Town_Name": "BOSTON", "Maximum_Injury_Severity_Reported": "Suspected Minor Injury (B)", "Count": 3946}, {"City_Town_Name": "BOSTON", "Maximum_Injury_Severity_Reported": "Suspected Serious Injury (A)", "Count": 406}, {"City_Town_Name": "BOSTON", "Maximum_Injury_Severity_Reported": "Unknown", "Count": 157}, {"City_Town_Name": "CAMBRIDGE", "Maximum_Injury_Severity_Reported": "Deceased not caused by crash", "Count": 2}, {"City_Town_Name": "CAMBRIDGE", "Maximum_Injury_Severity_Reported": "Fatal injury (K)", "Count": 14}, {"City_Town_Name": "CAMBRIDGE", "Maximum_Injury_Severity_Reported": "No Apparent Injury (O)", "Count": 4897}, {"City_Town_Name": "CAMBRIDGE", "Maximum_Injury_Severity_Reported": "No injury", "Count": 1216}, {"City_Town_Name": "CAMBRIDGE", "Maximum_Injury_Severity_Reported": "Non-fatal injury - Incapacitating", "Count": 33}, {"City_Town_Name": "CAMBRIDGE", "Maximum_Injury_Severity_Reported": "Non-fatal injury - Non-incapacitating", "Count": 237}, {"City_Town_Name": "CAMBRIDGE", "Maximum_Injury_Severity_Reported": "Non-fatal injury - Possible", "Count": 138}, {"City_Town_Name": "CAMBRIDGE", "Maximum_Injury_Severity_Reported": "Not Applicable", "Count": 69}, {"City_Town_Name": "CAMBRIDGE", "Maximum_Injury_Severity_Reported": "Not reported", "Count": 2061}, {"City_Town_Name": "CAMBRIDGE", "Maximum_Injury_Severity_Reported": "Possible Injury (C)", "Count": 540}, {"City_Town_Name": "CAMBRIDGE", "Maximum_Injury_Severity_Reported": "Suspected Minor Injury (B)", "Count": 1268}, {"City_Town_Name": "CAMBRIDGE", "Maximum_Injury_Severity_Reported": "Suspected Serious Injury (A)", "Count": 134}, {"City_Town_Name": "CAMBRIDGE", "Maximum_Injury_Severity_Reported": "Unknown", "Count": 61}, {"City_Town_Name": "SOMERVILLE", "Maximum_Injury_Severity_Reported": "Deceased not caused by crash", "Count": 1}, {"City_Town_Name": "SOMERVILLE", "Maximum_Injury_Severity_Reported": "Fatal injury (K)", "Count": 7}, {"City_Town_Name": "SOMERVILLE", "Maximum_Injury_Severity_Reported": "No Apparent Injury (O)", "Count": 2595}, {"City_Town_Name": "SOMERVILLE", "Maximum_Injury_Severity_Reported": "No injury", "Count": 692}, {"City_Town_Name": "SOMERVILLE", "Maximum_Injury_Severity_Reported": "Non-fatal injury - Incapacitating", "Count": 13}, {"City_Town_Name": "SOMERVILLE", "Maximum_Injury_Severity_Reported": "Non-fatal injury - Non-incapacitating", "Count": 128}, {"City_Town_Name": "SOMERVILLE", "Maximum_Injury_Severity_Reported": "Non-fatal injury - Possible", "Count": 123}, {"City_Town_Name": "SOMERVILLE", "Maximum_Injury_Severity_Reported": "Not Applicable", "Count": 11}, {"City_Town_Name": "SOMERVILLE", "Maximum_Injury_Severity_Reported": "Not reported", "Count": 111}, {"City_Town_Name": "SOMERVILLE", "Maximum_Injury_Severity_Reported": "Possible Injury (C)", "Count": 455}, {"City_Town_Name": "SOMERVILLE", "Maximum_Injury_Severity_Reported": "Suspected Minor Injury (B)", "Count": 664}, {"City_Town_Name": "SOMERVILLE", "Maximum_Injury_Severity_Reported": "Suspected Serious Injury (A)", "Count": 64}, {"City_Town_Name": "SOMERVILLE", "Maximum_Injury_Severity_Reported": "Unknown", "Count": 28}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
