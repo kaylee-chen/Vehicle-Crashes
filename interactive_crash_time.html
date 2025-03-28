@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crash Pie Chart</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; }
+    .chart-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .chart-box {
+      width: 600px;
+      height: 600px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Crash Count by Time Period</h2>
+  <div class="chart-container">
+    <div id="mainChart" class="chart-box"></div>
+    <div id="drilldownChart" class="chart-box"></div>
+  </div>
+
+  <script>
+    function groupByTimePeriods(data) {
+      const periods = {
+        Midnight: [],
+        Morning: [],
+        Afternoon: [],
+        Evening: []
+      };
+
+      data.forEach(d => {
+        if (d.hour >= 0 && d.hour < 6) periods.Midnight.push(d);
+        else if (d.hour >= 6 && d.hour < 12) periods.Morning.push(d);
+        else if (d.hour >= 12 && d.hour < 18) periods.Afternoon.push(d);
+        else if (d.hour >= 18 && d.hour < 24) periods.Evening.push(d);
+      });
+
+      return periods;
+    }
+
+    function drawMainChart(timePeriods) {
+      const labels = Object.keys(timePeriods);
+      const values = labels.map(period =>
+        timePeriods[period].reduce((sum, d) => sum + d.count, 0)
+      );
+
+      const mainData = [{
+        values: values,
+        labels: labels,
+        type: 'pie',
+        textinfo: 'label+percent',
+        hoverinfo: 'label+value',
+      }];
+
+      Plotly.newPlot('mainChart', mainData, { title: 'Crashes by Time Period' });
+
+      document.getElementById('mainChart').on('plotly_click', function(data) {
+        const period = data.points[0].label;
+        const hours = timePeriods[period];
+
+        const drillData = [{
+          values: hours.map(d => d.count),
+          labels: hours.map(d => `${d.hour}:00`),
+          type: 'pie',
+          textinfo: 'label+percent',
+          hoverinfo: 'label+value',
+        }];
+
+        Plotly.newPlot('drilldownChart', drillData, { title: `Hourly Breakdown - ${period}` });
+      });
+    }
+
+    Papa.parse("hourly_crash_counts.csv", {
+      download: true,
+      header: true,
+      dynamicTyping: true,
+      complete: function(results) {
+        const parsedData = results.data.filter(row => row.hour !== undefined && row.count !== undefined);
+        const timePeriods = groupByTimePeriods(parsedData);
+        drawMainChart(timePeriods);
+      }
+    });
+  </script>
+</body>
+</html>
