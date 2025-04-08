@@ -35,32 +35,33 @@
         <div style="margin-top: 80px;">
             <!-- Header Section -->
             <header>
-                <h1>Visualizations</h1>
-                <p>Explore interactive data visualizations that highlight insights from our dataset.</p>
             </header>
         </div>
         
         <!-- Main Content -->
         <section>
-            <h2>Map</h2>
-            <p>...</p>
-            <div id="mapVisualization"></div>
-        
-            <h2>Scatter Plot 1</h2>
-            <p>...</p>
+            <iframe src="3-barchart/index.html" width="100%" height="800px" style="border:none;"></iframe>
             <div id="scatterPlot1"></div>
+
+            <iframe src="interactive_crash_time.html" width="100%" height="800px" style="border:none;"></iframe>
+            <p>This interactive pie chart visualization shows how vehicle crashes are distributed over different times of day, and lets users explore the data in more detail. The left chart displays crash counts across four major time periods: Morning, Afternoon, Evening, and Midnight. When a user clicks on a slice of this chart, the right chart automatically updates, showing an hourly breakdown for that selected period. This interactivity helps users drill down into patterns and identify specific hours when crashes are most likely to occur.</p>
+            <div id="Pie Plot"></div>
+
+            <h2>Bar Plot</h2>
+            <iframe src="interactive_crash_severity.html" width="100%" height="800px" style="border:none;"></iframe>
+            <div id="Bar Plot"></div>
+
+            <h2>Sankey Diagram</h2>
+            <iframe src="sankey_diagram.html" width="100%" height="800px" style="border:none;"></iframe>
+            <p>This interactive Sankey diagram provides a visual representation of how vehicle crashes flow through different stages: from the city where they occurred, through the manner of collision, and finally to the severity of the crash.
+                The dropdown menu allows users to filter the data by specific types of collisions (e.g., Angle, Rear-end, Sideswipe), making it easy to explore patterns and trends. For instance, users can see how a certain collision type like Angle differs in frequency and severity across Boston, Cambridge, and Somerville.</p>
+            <div id="Sankey Diagram"></div>
+
         
             <h2>Scatter Plot 2</h2>
             <p>...</p>
             <div id="scatterPlot2"></div>
         
-            <h2>Pie Plot</h2>
-            <iframe src="interactive_crash_time.html" width="100%" height="800px" style="border:none;"></iframe>
-            <div id="histogram"></div>
-        
-            <h2>Bar Plot</h2>
-            <iframe src="interactive_crash_severity.html" width="100%" height="800px" style="border:none;"></iframe>
-            <div id="barPlot"></div>
         </section>
         
         
