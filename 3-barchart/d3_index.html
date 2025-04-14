@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crash Data Visualizations</title>
+
+  <!-- Load D3.js v7 from CDN -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <style>
+    /* my base page styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+
+    /* Wrapper to align both charts side-by-side */
+    .charts-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 40px;         /* space between charts */
+      flex-wrap: wrap;   /* allow stacking on small screens */
+    }
+
+    /* Each individual chart container */
+    .chart-section {
+      flex: 1;
+      min-width: 600px;  /* keep charts wide enough before stacking */
+    }
+
+    /* Center SVGs horizontally */
+    svg {
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Chart containers, targeted by D3 in main.js -->
+  <div class="charts-wrapper">
+    <div class="chart-section" id="chart1"></div> <!-- Chart 1: Crashes Per 10,000 People -->
+    <div class="chart-section" id="chart2"></div> <!-- Chart 2: Total Crash Count -->
+  </div>
+
+  <!-- MY main JavaScript file that draws both charts -->
+  <script src="main.js"></script>
+
+</body>
+</html>
