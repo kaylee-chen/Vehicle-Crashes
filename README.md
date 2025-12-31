@@ -3,4 +3,6 @@ Traffic accidents occur frequently and are a significant public safety concern, 
 
 This project will analyze crash data from Cambridge, Boston, and Somerville to identify environmental influences, high-risk areas, and temporal trends in vehicle accidents across three of the most densely populated cities in Massachusetts. Understanding when and where crashes occur most frequently, as well as how weather conditions and time of day influence accident severity, will provide valuable insights. These findings can be instrumental for city planners, transportation policymakers, and officials in making data-driven decisions to improve road safety and reduce crash rates.
 
+Link to the webpage: https://danny035.github.io/ 
+
 Here is the link to the repo that contains the web page: https://github.com/Danny035/Danny035.github.io/tree/main 
