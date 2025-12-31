@@ -1,1 +1,6 @@
 # Vehicle-Crashes
+Traffic accidents occur frequently and are a significant public safety concern, especially in densely populated areas like Boston, Cambridge, and Somerville. The Massachusetts Department of Transportation reported that over 100,000 crashes occur in Massachusetts annually (Collins, 2025). Furthermore, from 2020 to 2021, Massachusetts saw a 20.4% increase in deadly vehicle crashes (Spada Law..). This demonstrates how vehicle crashes are becoming more frequent and represent a growing public safety concern.
+
+This project will analyze crash data from Cambridge, Boston, and Somerville to identify environmental influences, high-risk areas, and temporal trends in vehicle accidents across three of the most densely populated cities in Massachusetts. Understanding when and where crashes occur most frequently, as well as how weather conditions and time of day influence accident severity, will provide valuable insights. These findings can be instrumental for city planners, transportation policymakers, and officials in making data-driven decisions to improve road safety and reduce crash rates.
+
+Here is the link to the web page: https://github.com/Danny035/Danny035.github.io/tree/main 
